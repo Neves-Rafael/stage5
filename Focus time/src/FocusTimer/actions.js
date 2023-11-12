@@ -29,5 +29,5 @@ export function toggleMusic() {
     sounds.bgAudio.play();
     return;
   }
-  sounds.bgAudio.play();
+  sounds.bgAudio.pause();
 }
