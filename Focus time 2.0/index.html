@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-bg" class="winter">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Temporizador estilo pomodoro" />
+
+    <title>Focus Timer</title>
+
+    <link rel="shortcut icon" href="" type="image/x-svg" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <video src="assets/bg-winter.mp4" loop autoplay muted></video>
+    <main>
+      <div class="app">
+        <span>25</span>
+        <span>:</span>
+        <span>00</span>
+        <div id="controls">
+          <button class="ph-bold ph-play-circle"></button>
+          <!-- <button class="ph-bold ph-pause-circle"></button> -->
+          <button class="ph-bold ph-stop-circle"></button>
+          <button class="ph-bold ph-plus-circle"></button>
+          <button class="ph-bold ph-minus-circle"></button>
+        </div>
+        <div class="loop-controle">
+          <button class="ph-bold ph-speaker-high"></button>
+          <!-- <button class="ph-bold ph-speaker-x"></button> -->
+          <!-- <button class="ph-bold ph-image"></button> -->
+          <button class="ph-bold ph-slideshow"></button>
+        </div>
+      </div>
+
+      <div class="toggle-theme">
+        <button class="ph ph-leaf"></button>
+        <button class="ph ph-cloud-rain"></button>
+        <button class="ph ph-cloud-sun"></button>
+        <button class="ph ph-sun"></button>
+      </div>
+    </main>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
