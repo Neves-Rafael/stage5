@@ -14,12 +14,20 @@ html.winter {
   --bg-video: url("./assets/bg-winter.mp4");
 }
 
+html.winter .toggle-theme button:nth-child(2) {
+  background-color: #ff1111;
+}
+
 html.summer {
   --hue: 0;
   --bg-color: hsl(0, 0%, 10%);
   --bg-color: hsl(0, 0%, 10%);
   --bg-color: hsl(0, 0%, 10%);
   --bg-color: hsl(0, 0%, 10%);
+}
+
+html.summer .toggle-theme button:nth-child(4) {
+  background-color: #ff1111;
 }
 
 html.fall {
@@ -30,6 +38,10 @@ html.fall {
   --bg-color: hsl(0, 0%, 10%);
 }
 
+html.fall .toggle-theme button:nth-child(3) {
+  background-color: #ff1111;
+}
+
 html.spring {
   --hue: 120;
   --bg-color: hsl(0, 0%, 10%);
@@ -38,12 +50,16 @@ html.spring {
   --bg-color: hsl(0, 0%, 10%);
 }
 
+html.spring .toggle-theme button:nth-child(1) {
+  background-color: #ff1111;
+}
+
 body {
   font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
-  background-color: #000;
+  background-color: #fff;
   /* background-size: cover; */
   /* background: var(--bg-video) no-repeat center center; */
 }
@@ -57,10 +73,26 @@ video {
 
 main {
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-content: center;
   gap: 20rem;
+}
+
+.container {
+  display: flex;
+  gap: 10rem;
+  padding: 5rem;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 2.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 0.8rem 3.2rem 0 rgba(0, 0, 0, 0.37);
 }
 
 button {
@@ -70,6 +102,9 @@ button {
 
 .app {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .app button {
@@ -77,7 +112,7 @@ button {
   width: 5rem;
 }
 
-.app span {
+span {
   font-size: 12.6rem;
   font-family: sans-serif;
   font-weight: bold;
@@ -106,13 +141,25 @@ button {
   font-size: 5rem;
 }
 
-.loop-controle {
+#loop-controle {
   display: flex;
   gap: 4rem;
   justify-content: center;
   margin-top: 2rem;
 }
 
-.loop-controle button {
+#loop-controle button {
   font-size: 5rem;
+}
+
+/* controls */
+.running .ph-play-circle,
+.running .ph-timer,
+.music-on .ph-speaker-high,
+.animate-on .ph-image,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle,
+html:not(.music-on) .ph-speaker-x,
+html:not(.animate-on) .ph-slideshow {
+  display: none;
 }
